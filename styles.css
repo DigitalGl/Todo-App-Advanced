@@ -46,8 +46,20 @@ body {
     }
 }
 
+.search-input-container {
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    margin: 0 auto 30px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+}
+
 .add-todo-input,
-.streach-input {
+.search-input {
     border: none;
     font-size: 24px;
     flex-grow: 3;
@@ -105,7 +117,7 @@ body {
         background-color: #b83d3d;
         cursor: pointer;
 
-        &.disabled {
+        &:disabled {
             background-color: #b79999;
             cursor: not-allowed;
         }

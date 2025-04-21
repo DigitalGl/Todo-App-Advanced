@@ -1,11 +1,11 @@
-
-const TODOS_KEY = "todos";
+export const getDateRepresentation = (date) => {
+    return Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "numeric", year: "numeric" }).format(date);
+}
 
 export const saveTodosIntoLocalStorage = (todos) => {
-    localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-export const getTodosIntoLocalStorage = () => {
-    return JSON.parse(localStorage.getItem(TODOS_KEY)) || [];
+export const getTodosFromLocalStorage = () => {
+    return JSON.parse(localStorage.getItem("todos")) || [];
 }
-
